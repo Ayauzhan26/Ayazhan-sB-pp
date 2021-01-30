@@ -1,0 +1,79 @@
+h2 {
+  color:grey;
+  background-color:lightblue;
+  text-align: center;
+  font-size: 38px;
+  font-family: monospace;
+}
+li {
+  font-size:27px;
+  text-align:justify;
+  color: #4F6A4A;
+  font-family: "Courier New", monospace;
+}
+h1 {
+  color: #ffbb99;
+  text-align:center;
+  font-size: 67px;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+}
+.bg-color {
+    background-color: #d4edda;
+    width: 100%;
+    padding-top: 3px;
+    padding-bottom: 1px;
+}
+
+.sections {
+    margin-bottom: 10px;
+}
+
+.loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -75px 0 0 -75px;
+    border: 16px solid ;
+    border-radius: 50%;
+    border-top: 16px solid;
+    width: 120px;
+    height: 120px;
+    animation: loading ease-out;
+    animation-iteration-count: 1;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg); border-color: black; border-top-color: yellow; opacity: 1; z-index: 1;
+    }
+    25% {
+        transform: rotate(90deg); border-color: grey; border-top-color: black; opacity: 0,8; z-index: 1;
+    }
+    50% {
+        transform: rotate(180deg); border-color: yellow; border-top-color: grey; opacity: 0,8; z-index: 1;
+    }
+    75% {
+        transform: rotate(270deg); border-color: black; border-top-color: yellow; opacity: 0,6; z-index: 1;
+    }
+    100% {
+        transform: rotate(360deg); border-color: grey; border-top-color: black; opacity: 0; z-index: -1;
+    }
+}
+
+.animation {
+    animation: moving linear;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+
+}
+
+@keyframes moving {
+    0% {
+    opacity: 0; z-index: -1;
+    }
+    100% {
+     opacity: 1; z-index: 1;
+}
